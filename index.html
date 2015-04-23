@@ -56,8 +56,6 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                  
-				  
                     <li>
                         <a class="page-scroll" href="#projects">Projects</a>
                     </li>
@@ -78,10 +76,8 @@
     <header>
         <div class="container" id="header">
 			<div class="intro-text" id="header-content">
-                <div class="intro-lead-in">Handling</div>
 				
-                <div>  <h4>Spatial Information</h4></div>
-				<div class="filler"></div>
+                
 				
             </div>
         </div>
@@ -100,7 +96,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 projects-item">
-                    <a href="http://84.48.54.79/terrain" class="projects-link">
+                    <a href="#terrainModal" class="projects-link" data-toggle="modal">
                         <div class="projects-hover">
                             <div class="projects-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -114,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 projects-item">
-                    <a href="#projectsModal2" class="projects-link" data-toggle="modal">
+                    <a href="#langelandModal" class="projects-link" data-toggle="modal">
                         <div class="projects-hover">
                             <div class="projects-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -128,7 +124,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 projects-item">
-                    <a href="#projectsModal3" class="projects-link" data-toggle="modal">
+                    <a href="#pointModal" class="projects-link" data-toggle="modal">
                         <div class="projects-hover">
                             <div class="projects-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -220,29 +216,27 @@
 
 	
 
-    <footer>
+    <footer id="contact" >
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a target="_blank" href="https://twitter.com/kjartanb"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a target="_blank" href="https://www.facebook.com/kjartanbjorset"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a target="_blank" href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="mailto:kjartanbjorset@gmail.com"><i class="fa fa-envelope"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -251,8 +245,8 @@
     <!-- projects Modals -->
     <!-- Use the modals below to showcase details about your projects projects! -->
 
-    <!-- projects Modal 1 -->
-    <div class="projects-modal modal fade" id="projectsModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Terrain modal -->
+    <div class="projects-modal modal fade" id="terrainModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -265,8 +259,8 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <h2>Terrain</h2>
+                            <p class="item-intro text-muted">Storing and visualizing Norway's Height DEM</p>
                             <img class="img-responsive" src="img/projects/roundicons-free.png" alt="">
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                             <p>
@@ -285,7 +279,7 @@
     </div>
 
     <!-- projects Modal 2 -->
-    <div class="projects-modal modal fade" id="projectsModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="projects-modal modal fade" id="langelandModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -297,8 +291,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Heading</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <h2>Langeland</h2>
+                            <p class="item-intro text-muted">Live monitoring ski tracks</p>
+                            
                             <img class="img-responsive img-centered" src="img/projects/startup-framework-preview.png" alt="">
                             <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
                             <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>

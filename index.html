@@ -106,7 +106,7 @@
                     </a>
                     <div class="projects-caption">
                         <h4>Terrain</h4>
-                        <p class="text-muted">3D storage, visualization and printing</p>
+                        <p class="text-muted">Storing, visualizing and 3D printing the DEM of Norway</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 projects-item">
@@ -120,11 +120,11 @@
                     </a>
                     <div class="projects-caption">
                         <h4>Langeland</h4>
-                        <p class="text-muted">Monitoring ski tracks</p>
+                        <p class="text-muted">Live monitoring ski tracks</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 projects-item">
-                    <a href="#pointModal" class="projects-link" data-toggle="modal">
+                    <a href="#pointcloudModal" class="projects-link" data-toggle="modal">
                         <div class="projects-hover">
                             <div class="projects-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -260,17 +260,13 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Terrain</h2>
-                            <p class="item-intro text-muted">Storing and visualizing Norway's Height DEM</p>
-                            <img class="img-responsive" src="img/projects/roundicons-free.png" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p class="item-intro text-muted">Storing, visualizing and 3D printing the DEM of Norway</p>
+                            <img class="img-responsive" src="img/projects/sunnfjord.png" alt="">
+                            <p>When I started working at Norkart fall 2014, I was so lucky as to get my hand on the company's 3D printer. I got busy printing models right away, but wanted to get some nice 3D terrain models. I remember having some terrain visualization projects lying around, inspired by the various solutions that popped up on the web back in 2013, when the Norwegian mapping authorities decided to release the DEM data. The most noteworthy projects are Bengler's Terrafab and this post by Thematicmapping.</p>
+                            
+                            <p>Anyways, I continued where I had previously left off with my own attempt and ended up with a system for storing, visualizing and generating 3D models for DEM rasters. The main difference is the use of PostGIS as a storage solution. The result can be seen at <a target="_blank" href="http://www.kartan.no/terrain">here.</a></p>
                             <p>
-                                <strong>Want these icons in this projects item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                            <ul class="list-inline">
-                                <li>Date: July 2014</li>
-                                <li>Client: Round Icons</li>
-                                <li>Category: Graphic Design</li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -294,10 +290,11 @@
                             <h2>Langeland</h2>
                             <p class="item-intro text-muted">Live monitoring ski tracks</p>
                             
-                            <img class="img-responsive img-centered" src="img/projects/startup-framework-preview.png" alt="">
-                            <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <img class="img-responsive img-centered" src="img/langeland_app.png" alt="">
+                            
+                            <p><a target="_blank" href="http://www.langelandskisenter.no">LangelandSkisenter.no</a> was created to show real time information about ski tracks in a small town in Western Norway. Making the system run reliably was troublesome as finding the right GPS tracking device proved difficult. This solution is to a large extent based on PostGIS and Leaflet for storing and visualizing the data, but also has some temporal track functionality implemented both in Leaflet and in PostGIS. Although my initial goal was to create everything from scratch, including the GPS tracker, I ended up going with a cheap tracking device bought on Ebay in conjunction with the <a href="http://www.traccar.org/" target="_blank">Traccar</a> server, an open-source GPS tracking server.</p>
+                            
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -306,7 +303,7 @@
     </div>
 
     <!-- projects Modal 3 -->
-    <div class="projects-modal modal fade" id="projectsModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="projects-modal modal fade" id="pointcloudModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -319,8 +316,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <h2>Managing Denmark's Point Cloud</h2>
                             <img class="img-responsive img-centered" src="img/projects/treehouse-preview.png" alt="">
                             <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
                             <p>You can download the PSD template in this projects sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>

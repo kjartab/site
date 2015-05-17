@@ -130,7 +130,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/projects/treehouse.png" class="img-responsive" alt="">
+                        <img src="img/projects/pointcloud.png" class="img-responsive" alt="">
                     </a>
                     <div class="projects-caption">
                         <h4>Cloudy</h4>
@@ -183,7 +183,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/logos/norkart.png" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -256,11 +256,11 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Terrain</h2>
-                            <p class="item-intro text-muted">Storing, visualizing and 3D printing the DEM of Norway</p>
+                            <p class="item-intro text-muted">Storing and visualizing the DEM of Norway</p>
                             <img class="img-responsive" src="img/projects/sunnfjord.png" alt="">
                             <p>When I started working at Norkart fall 2014, I was so lucky as to get my hand on the company's 3D printer. I got busy printing models right away, but wanted to get some nice 3D terrain models. I remember having some terrain visualization projects lying around, inspired by the various solutions that popped up on the web back in 2013, when the Norwegian mapping authorities decided to release the DEM data. The most noteworthy projects are Bengler's Terrafab and this post by Thematicmapping.</p>
                             
@@ -285,7 +285,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>Langeland</h2>
                             <p class="item-intro text-muted">Live monitoring ski tracks</p>
@@ -313,14 +313,24 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Managing Denmark's Point Cloud</h2>
-                            <img class="img-responsive img-centered" src="img/projects/treehouse-preview.png" alt="">
-                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
-                            <p>You can download the PSD template in this projects sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <h2>Point Clouds</h2>
+                            <img class="img-responsive img-centered" src="img/projects/pointcloud.png" alt="">
+                            <p>PostgreSQL, point cloud data and 3D visualiztion  must be my favourite topics in the IT universe, and combining them is not only a whole lot of fun, but also impressive considering the fact that realational SQL was created in the 1970's and certainly was not made for 3D nor point clouds. I had a crack at this problem back in 2013 when I wrote my master thesis on LiDAR storage in databases. It was not very impressive.</p>
+                            
+                            
+                            <p>
+                            At the same time as I was writing my an abomination of a database storage solution for LiDAR data, Paul Ramsey crafted a functioning system: The PointCloud extension to PostgreSQL. Hired in by the Canadian mapping authorities, he was set to create a system for storing the country's LiDAR data sets. Kudos to the Canadians for supporting open-source! It would be intresting to hear how that all panned out.</p>
+                            
+                            <p>Paul presented it at FOSS4GNA, but after that it's been pretty silent. He is also on record for saying it is not particularly well-suited for large LiDAR data sets. Technically it is however very similar to Oracle's database Point Cloud, a solution they market as a viable option for LiDAR data storage. With ESRI creeping around, trying to take over the LiDAR market with their ghastly zLAS file format, I feel it is important to show-case the potential that lies in open-source solutions. Therefore, I have decided to create a LiDAR data warehouse holding all of Denmarks point cloud data, but packaged in a system that far surpasses what they are currently offering.
+                            </p>
+                            
+                            <p>
+                            The LiDAR world on the other hand is in full turmoil: A certain company called ESRI is creeping with a ghastly "optimized LAS" file format, effectively splitting up the LiDAR field and generally just being annyoing. If you're working with LiDAR. Stay the heck away from that and keep to LAS and LAZ. Read more about this little crisis <a>here</a>.</p>
+                            
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
@@ -328,86 +338,7 @@
         </div>
     </div>
 
-    <!-- projects Modal 4 -->
-    <div class="projects-modal modal fade" id="projectsModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/projects/golden-preview.png" alt="">
-                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great projects, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
-                            <p>You can download the PSD template in this projects sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- projects Modal 5 -->
-    <div class="projects-modal modal fade" id="projectsModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/projects/escape-preview.png" alt="">
-                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
-                            <p>You can download the PSD template in this projects sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- projects Modal 6 -->
-    <div class="projects-modal modal fade" id="projectsModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/projects/dreams-preview.png" alt="">
-                            <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
-                            <p>You can download the PSD template in this projects sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

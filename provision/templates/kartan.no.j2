@@ -11,6 +11,7 @@ server {
 
     # SSL configuration
 
+    server_name {{domain_name}} www.{{domain_name}};
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     include snippets/ssl-{{domain_name}}.conf;

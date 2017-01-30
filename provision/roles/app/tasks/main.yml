@@ -1,0 +1,10 @@
+---
+
+- name: Copy file
+  template: src=site dest=/etc/nginx/sites-available/{{domain_name}}
+
+- name: enable site
+  file: src=/etc/nginx/sites-available/{{domain_name}} dest=/etc/nginx/sites-enabled/{{domain_name}} state=link
+
+- name: restart nginx
+  service: name=nginx state=restarted

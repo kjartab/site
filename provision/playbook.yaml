@@ -1,0 +1,16 @@
+---
+- hosts: "{{ host_input | default('default')}}"
+  become: yes
+  vars:
+    letsencrypt_email: kjartanbjorset@gmail.com
+    domain_name: kartan.no
+  roles: 
+    
+    - role: kjartab.nginx
+      tags: nginx
+    
+    - role: nginx-letsencrypt
+      tags: tls
+
+    - role: app
+      tags: app

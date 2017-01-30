@@ -16,7 +16,7 @@ server {
     include snippets/ssl-{{domain_name}}.conf;
     include snippets/ssl-params.conf;
 
-    root /var/www/site;
-    
+    root /var/www/{{domain_name}};
+
 
 }

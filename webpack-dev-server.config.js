@@ -42,7 +42,8 @@ const config = {
         loader: 'file'
       },
       {
-        test: /\.js$/, // All .js files
+        test: /\.(js|jsx)$/,
+        // test: /\.jsx?$/, // All .js files
         loaders: ['babel-loader'],
         exclude: [nodeModulesPath],
       },

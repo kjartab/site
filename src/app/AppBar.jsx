@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Main from './Main'; // Our custom react component
+import Main from './Main.jsx'; // Our custom react component
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer'; // Our custom react component
 
@@ -15,7 +15,6 @@ export default class Header extends React.Component {
         super(props);
         this.state = {open: false};
     }
-
 
     handleToggle = () => this.setState({open: !this.state.open});
 

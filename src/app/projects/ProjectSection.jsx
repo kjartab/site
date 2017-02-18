@@ -17,6 +17,14 @@ const styleProjectSection = {
     marginRight: 'auto'
 }
 
+const containerStyle = {
+    marginTop: 150,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center'
+}
+
+
 const zDepth = 1;
 
 
@@ -24,21 +32,23 @@ export default class ProjectSection extends React.Component {
 
     constructor(props) {
         super(props);
+        console.log(props);
     }
 
     render() {
-        return (<div>
-          <h2>My projects</h2>
-
-          {
-            this.props.projects.map((project) => 
-            <ProjectBox 
-             name={project.name}
-             url={project.url}
-             key={project.id}
-            />)
-          }
-        </div>)
-
+        return (
+          <div style={containerStyle}>
+            <div style={ { width:"50%", marginLeft: 'auto', marginRight: 'auto'}}>
+            <h1>Projects</h1>
+            <p>I'm always creating new projects on github without really finishing what I started because something more fun came to mind. My hope is that by using continuous integration and keeping them out here in the open I will be able to prevent myself from forgetting about projects and breaking them.</p>
+            </div>
+            {
+              this.props.projects.map((project) => 
+              <ProjectBox 
+                project={project}
+              />)
+            }
+          </div>
+        )
     }
 }

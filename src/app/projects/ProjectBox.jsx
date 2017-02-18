@@ -10,6 +10,13 @@ const style = {
   cursor: 'pointer'
 };
 
+const imgStyle = {
+  height: 200,
+  width: 380,
+  marginTop: 10,
+  WebkitFilter: 'grayscale(100%)'
+}
+
 const zDepth = 2;
 
 export default class ProjectBox extends React.Component {
@@ -33,18 +40,18 @@ export default class ProjectBox extends React.Component {
     }
 
     render() {
-
+        var project = this.props.project;
         return (
             <Paper 
               style={style} 
-              zDepth={2} 
+              zDepth={1} 
               onMouseEnter={this.toggleHover} 
               onMouseLeave={this.toggleHover}
               onClick={this.handleClick}
             >
-              <img></img>
-              <h4>{this.props.name}</h4>
-              <p>Storing, visualizing and 3D printing the DEM of Norway</p>
+              <img style={imgStyle} src={project.imgUrl}></img>
+              <h4>{project.name}</h4>
+              <p>{project.description}</p>
             </Paper>
         );
     }

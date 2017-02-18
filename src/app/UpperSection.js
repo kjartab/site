@@ -3,10 +3,11 @@ import React from 'react';
 const bgImage = require('./IMG_2669s.jpg');
 
 var sectionStyle = {
-  width: "100%",
-  height: "600px",
-  backgroundPosition: "right 0",
-  backgroundImage: "url(" + bgImage+ ")",
+    marginTop: -20,
+    width: "100%",
+    height: "600px",
+    backgroundPosition: "right 0",
+    backgroundImage: "url(" + bgImage+ ")",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
 };
@@ -30,7 +31,6 @@ export default class UpperSection extends React.Component {
     render() {
         return (
           <div style={ sectionStyle }>
-            <p>test</p>
 
           </div>
         );

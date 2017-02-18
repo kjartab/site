@@ -1,6 +1,7 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Main from './Main.jsx'; // Our custom react component
+import {  Link  } from 'react-router'
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer'; // Our custom react component
 
@@ -48,6 +49,7 @@ export default class Header extends React.Component {
                     <MenuItem onTouchTap={this.handleMyProjects}>My Projects</MenuItem>
                     <MenuItem onTouchTap={this.handleSignOut}>Sign Out</MenuItem>
                 </Drawer>
+                <Link to="projects">t</Link>
             </div>
         )
     }

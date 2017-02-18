@@ -11,3 +11,11 @@ body {
   font-size: 13px;
   line-height: 20px;
 }
+
+.uppersection h2 {
+    font-size: 14px;
+}
+
+.uppersection h1 {
+    font-size: 18px;
+}

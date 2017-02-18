@@ -42,7 +42,6 @@ export default class Main extends React.Component {
     render() {
         return (
           <div className="counter">
-            <AppBar/>
             <UpperSection/>
             <ProjectSection projects = {this.props.projects} />
             <AboutSection abouts = {this.props.abouts} />

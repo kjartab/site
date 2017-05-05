@@ -1,0 +1,6 @@
+---
+- apt: name=unzip
+- local_action: archive path={{local_project_dir}}/build dest={{local_project_dir}}/build.tar.gz
+# - synchronize: src={{local_project_dir}}/build.tgz dest=/tmp/{{nginx_app_domain_name}}-build.tgz
+- unarchive: src={{local_project_dir}}/build.tar.gz dest={{nginx_app_webroot}} extra_opts=[-C]
+- local_action: file path={{local_project_dir}}/build.tar.gz state=absent

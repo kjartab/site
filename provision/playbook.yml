@@ -1,0 +1,12 @@
+---
+- hosts: regn
+  become: yes
+  vars:
+    nginx_app_domain_name: "www.kartan.no"
+    nginx_app_webroot: /var/www/{{nginx_app_domain_name}}
+    letsencrypt_email: kjartanbjorset@gmail.com
+    local_project_dir: "{{ playbook_dir.split('/')[0:-1]|join('/') }}"
+    
+  roles:
+    # - ansible-role-nginx-certbot-app
+    - deploy-app

@@ -20,7 +20,14 @@
         line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
         regexp: "^github\\.com"
 
-    - git: repo=ssh://git@github.com/kjartab/site dest=/home/git/site bare=yes
+    # - git: repo=ssh://git@github.com/kjartab/site dest=/home/git/site bare=yes
+    #   become_user: git
+    - file: path=/home/git/site.git state=directory
       become_user: git
 
-    - copy: src={{local_project_dir}}/hooks/post-receive dest=/home/git/site/hooks/post-receive 
+    - shell: cd /home/git/site.git && git init --bare
+      become_user: git
+      
+    - copy: src={{local_project_dir}}/hooks/post-receive dest=/home/git/site.git/hooks/post-receive owner=git
+
+    - file: path=/home/git/site.git/hooks/post-receive mode=a+x

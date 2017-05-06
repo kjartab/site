@@ -11,5 +11,19 @@
     # - ansible-role-nginx-certbot-app
     # - role: deploy-app
 
-  # tasks: 
-  #   - git: 
+  tasks:
+    - name: ensure github.com is a known host
+      lineinfile:
+        dest: /home/git/.ssh/known_hosts
+        create: yes
+        state: present
+        line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+        regexp: "^github\\.com"
+
+    - git: repo=ssh://git@github.com/kjartab/site dest=/home/git/site
+      become_user: git
+
+    - file: src={{local_project_dir}}/hooks/post-receive dest=/home/git/site/.git/hooks/post-receive
+
+    
+  

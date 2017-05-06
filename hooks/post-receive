@@ -43,7 +43,7 @@ export DEPLOY_ALLOWED_BRANCH="master"
 
 # Use this to do update tasks and maybe service restarts
 # If you need this just delete the comment and modify to your needs
-#POST_UPDATE_CMD='cd ${DEPLOY_ROOT} && make update'
+POST_UPDATE_CMD='cp -a ${DEPLOY_ROOT/build/. /var/www/site/'
 
 ###########################################################################################
 
@@ -91,7 +91,6 @@ do
     git reset --hard "$DEPLOY_NEWREV" || exit 1
 
     if [ ! -z "${POST_UPDATE_CMD}" ]; then
-       cp -a $DEPLOY_ROOT/build/. /var/www/site/
        echo
        echo "githook: POST UPDATE (CMD: '${POST_UPDATE_CMD}'):"
        eval $POST_UPDATE_CMD || exit 1

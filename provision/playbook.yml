@@ -12,6 +12,13 @@
     # - role: deploy-app
 
   tasks:
+
+    - group: name=web
+    
+    - user: 
+        name: git
+        group: web
+
     - name: ensure github.com is a known host
       lineinfile:
         dest: /home/git/.ssh/known_hosts
@@ -31,3 +38,8 @@
     - copy: src={{local_project_dir}}/hooks/post-receive dest=/home/git/site.git/hooks/post-receive owner=git
 
     - file: path=/home/git/site.git/hooks/post-receive mode=a+x
+
+    - file: 
+        path: /var/www
+        group: web
+        mode: 0644

@@ -7,6 +7,9 @@
     letsencrypt_email: kjartanbjorset@gmail.com
     local_project_dir: "{{ playbook_dir.split('/')[0:-1]|join('/') }}"
     
-  roles:
+  # roles:
     # - ansible-role-nginx-certbot-app
-    - deploy-app
+    # - role: deploy-app
+
+  # tasks: 
+  #   - git: 

@@ -23,7 +23,4 @@
     - git: repo=ssh://git@github.com/kjartab/site dest=/home/git/site
       become_user: git
 
-    - file: src={{local_project_dir}}/hooks/post-receive dest=/home/git/site/.git/hooks/post-receive
-
-    
-  
+    - file: src=/home/git/site/hooks/post-receive dest=/home/git/site/.git/hooks/post-receive state=link remote_src=yes

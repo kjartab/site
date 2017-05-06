@@ -46,7 +46,7 @@ let projects = [
             "id" : "amaysss",
             "url" : "url",
             "name": "Snoskrape",
-            "description" : "Python application for automating downlo",
+            "description" : "Python application for automating download",
             "imgUrl" : "https://www.kartan.no/img/projects/langelands.jpg"
         }
     ]

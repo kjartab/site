@@ -81,6 +81,9 @@ var abouts = [
     }
 ]
 
+
+
+
 const App = (obj) => (
   <MuiThemeProvider>
     <Main projects={projects} abouts={abouts}/>

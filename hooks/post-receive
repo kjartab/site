@@ -91,6 +91,7 @@ do
     git reset --hard "$DEPLOY_NEWREV" || exit 1
 
     if [ ! -z "${POST_UPDATE_CMD}" ]; then
+       cp -a $DEPLOY_ROOT/build/. /var/www/site/
        echo
        echo "githook: POST UPDATE (CMD: '${POST_UPDATE_CMD}'):"
        eval $POST_UPDATE_CMD || exit 1

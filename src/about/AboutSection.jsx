@@ -1,6 +1,6 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import AboutCircle from './AboutCircle.jsx'
+import AboutBox from './AboutBox.jsx'
 
 const containerStyle = {
     marginTop: 250,
@@ -46,7 +46,8 @@ export default class AboutSection extends React.Component {
                 <div style={timelineStyle}></div>
                 {
                     this.props.abouts.map((about) => 
-                        <AboutCircle  
+                        <AboutBox
+                            orientRight={true}
                             key={about.id}
                             about={about} />
                     )

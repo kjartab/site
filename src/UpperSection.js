@@ -5,7 +5,7 @@ const bgImage = require('./IMG_2669bwr.jpg');
 var sectionStyle = {
     marginTop: -22,
     width: "100%",
-    height: "700px",
+    height: 960,
     backgroundPosition: "right 0",
     backgroundImage: "url(" + bgImage+ ")",
     backgroundRepeat: "no-repeat",

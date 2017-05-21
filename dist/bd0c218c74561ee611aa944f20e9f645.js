@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Main from './Main.jsx';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+
 injectTapEventPlugin();
-require("./main.css");
 
 let projects = [
         { 
@@ -12,45 +12,44 @@ let projects = [
             "url" : "url",
             "name": "Toptour",
             "description" : "Finding the perfect ski trip",
-            "imgUrl" : require("./img/projects/langelands.jpg")
-        },  
+            "imgUrl" : "img/projects/langelands.jpg"
+        },
         { 
             "id" : "af89may9",
             "url" : "url",
             "name": "LangelandSkisenter",
             "description" : "Live monitoring ski tracks",
-            "imgUrl" : require("./img/projects/langelands.jpg")
+            "imgUrl" : "img/projects/langelands.jpg"
         },
         { 
             "id" : "af89ssmay9",
             "url" : "url",
             "name": "3D printing Norway",
             "description" : "Storing, visualizing and 3D printing the DEM of Norway",
-            "imgUrl" : require("./img/projects/sunnfjord.png")
+            "imgUrl" : "img/projects/sunnfjord.png"
         },
         { 
             "id" : "af894may9",
             "url" : "url",
             "name": "Cloudy",
             "description" : "PostGIS PC testing",
-            "imgUrl" : require("./img/projects/pointcloud.png")
+            "imgUrl" : "img/projects/pointcloud.png"
         },
         { 
             "id" : "amay9",
             "url" : "url",
             "name": "Qmesh",
             "description" : "Looking closer at the structure of 3D tiles",
-            "imgUrl" : require("./img/projects/langelands.jpg")
+            "imgUrl" : "img/projects/langelands.jpg"
         },
         { 
             "id" : "amaysss",
             "url" : "url",
             "name": "Snoskrape",
             "description" : "Python application for automating download",
-            "imgUrl" : require("./img/projects/langelands.jpg")
+            "imgUrl" : "img/projects/langelands.jpg"
         }
     ]
-    console.log(projects)
 
 var abouts = [
     {
@@ -59,7 +58,7 @@ var abouts = [
         "yearend": "2013",
         "title" : "Student at NTNU",
         "text" : "I studied Engineering & ICT at the Norwegian University of Technology and Science, specializing in Geomatics.",
-        "imgUrl" : require("./img/about/1.jpg")
+        "imgUrl" : "img/about/1.jpg"
     },  
        
     {
@@ -68,7 +67,7 @@ var abouts = [
         "yearend" : "2014",
         "title" : "Offshore surveyor",
         "text" : "I started off working in the offshore industry, for a company called iSurvey. Being offshore most of the time, I carried out navigation and surveying tasks on vessels and rigs in the North Sea.",
-        "imgUrl" : require("./img/about/surveydenmark.jpg")
+        "imgUrl" : "img/about/surveydenmark.jpg"
        
     },
     {
@@ -77,7 +76,7 @@ var abouts = [
         "yearend" : "today",
         "title" : "Software Developer",
         "text" : "Fall 2014 I stared working at Norkart, where I get to work as a software developer, doing things I really enjoy: Organizing, visualizing and mining geospatial data.",
-        "imgUrl" : require("./img/logos/norkart.png")
+        "imgUrl" : "img/logos/norkart.png"
        
     }
 ]

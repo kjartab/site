@@ -4,6 +4,13 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+try {
+  require('os').networkInterfaces();
+}
+catch (e) {
+  require('os').networkInterfaces = () => ({});
+}
+
 var config = {
   context: __dirname + '/src', // `__dirname` is root of project and `src` is source
   entry: {
@@ -30,11 +37,15 @@ var config = {
         }]
       },  
       {
-          test: /\.(jpe?g|png|gif|svg)$/i,
-          loaders: [
-              'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-              'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
-          ]
+          test: /\.(jpg|png|svg)$/,
+          loader: 'file-loader',
+          query: {
+              name: '[name].[hash].[ext]'
+          }
+      },
+      { 
+          test: /\.css$/, 
+          loader: "style-loader!css-loader" 
       },
       {
         test: /\.(sass|scss)$/, //Check for sass or scss file names

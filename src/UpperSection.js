@@ -14,9 +14,8 @@ var sectionStyle = {
 
 var topRow = {
     display:"inline-block"
-
-
 }
+
 var leftTopRow = {
     position: "absolute",
     top: 30,

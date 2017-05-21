@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Main from './Main.jsx'; // Our custom react component
-import {  Link  } from 'react-router'
+// import {  Link  } from 'react-router'
 import MenuItem from 'material-ui/MenuItem';
 import Drawer from 'material-ui/Drawer'; // Our custom react component
 
@@ -17,7 +17,8 @@ export default class Header extends React.Component {
         this.state = {open: false};
     }
 
-    handleToggle = () => this.setState({open: !this.state.open});
+
+    // handleToggle = () => this.setState({open: !this.state.open});
 
     handleMyProjects() {
         // handleToggle();
@@ -34,7 +35,8 @@ export default class Header extends React.Component {
     render() {
         return (
             <div>
-                <AppBar onLeftIconButtonTouchTap={this.handleToggle}
+                <AppBar 
+                    onLeftIconButtonTouchTap={this.handleToggle}
                     title="Kartan"
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
                 /> 
@@ -49,11 +51,10 @@ export default class Header extends React.Component {
                     <MenuItem onTouchTap={this.handleMyProjects}>My Projects</MenuItem>
                     <MenuItem onTouchTap={this.handleSignOut}>Sign Out</MenuItem>
                 </Drawer>
-                <Link to="projects">t</Link>
             </div>
         )
     }
     
 }
-
+                // <Link to="projects">t</Link>
 

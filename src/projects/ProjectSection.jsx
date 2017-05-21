@@ -45,6 +45,7 @@ export default class ProjectSection extends React.Component {
             {
               this.props.projects.map((project) => 
               <ProjectBox 
+                key={project.id}
                 project={project}
               />)
             }

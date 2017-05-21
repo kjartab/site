@@ -38,14 +38,17 @@ export default class AboutSection extends React.Component {
 
     render() {
         return (
-          <div style={containerStyle}>
+          <div 
+            style={containerStyle}>
             <h1>About me</h1>
             <p>A bit about my background</p>
             <div style={timelineContainerStyle}>
                 <div style={timelineStyle}></div>
                 {
                     this.props.abouts.map((about) => 
-                        <AboutCircle  about={about} />
+                        <AboutCircle  
+                            key={about.id}
+                            about={about} />
                     )
                 }
 

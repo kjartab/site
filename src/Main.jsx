@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from './AppBar.jsx';
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
+// import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
 import UpperSection from './UpperSection';
 import ProjectPage from './projects/ProjectPage.jsx';
 import AboutSection from './about/AboutSection.jsx';

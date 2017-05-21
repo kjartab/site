@@ -23,4 +23,3 @@ deploy:
   script: rsync -rav --no-perms --delete-after --quiet $TRAVIS_BUILD_DIR/dist/ travis@www.kartan.no:/var/www/www.kartan.no/
   on:
     branch: master
-before_install:
